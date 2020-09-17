@@ -72,7 +72,7 @@ $("#search").on("click", function() {
 
 })
 
-var city = [];
+var cityname = [];
 $("#buttons-view").empty();
 for  (var i = 0; i < city.length; i++) {
     var c = $("<button>");
