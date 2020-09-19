@@ -25,7 +25,7 @@ function currentLocation() {
             longi = position.coords.longitude;
 
             queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lati + "&lon=" + longi + "&appid=" + APIKey;
-            queryUV = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey +
+            queryUV = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey +
         "&lat=" + lati + "&lon=" + longi;
         $.ajax({
             url: queryURL,
@@ -91,7 +91,7 @@ $("#search").on("click", function(event) {
 
         lati = response.coord.lat;
         longi = response.coord.lon;
-        queryUV = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey +
+        queryUV = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey +
         "&lat=" + lati + "&lon=" + longi;
     
         $.ajax({
@@ -135,7 +135,7 @@ $(document).on("click", ".atag", function(){
         $("#wind").text("Wind: " + Math.floor(response.wind.speed * 2.237) + "mph");
         lati = response.coord.lat;
         longi = response.coord.lon;
-        queryUV = "http://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey +
+        queryUV = "https://api.openweathermap.org/data/2.5/uvi?appid=" + APIKey +
         "&lat=" + lati + "&lon=" + longi;
         
         $.ajax({
