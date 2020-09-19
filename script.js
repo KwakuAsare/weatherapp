@@ -120,7 +120,7 @@ $("#search").on("click", function(event) {
 
 //previous search
 
-$(document).on("click", ".atag", function(){
+$(document).on("click", function(){
     var cityname = $(this).text();
   
     queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&appid=" + APIKey;
