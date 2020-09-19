@@ -105,7 +105,7 @@ $("#search").on("click", function(event) {
      }).then(function(response) {
          ultra2 = response.value;
          $("#vally").empty();
-        $("#vally").text("UV Index: " + ultra2); 
+        $("#vally").text(ultra2); 
      });
      
      $.ajax({
