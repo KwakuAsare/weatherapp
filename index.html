@@ -22,15 +22,14 @@
                         <div class="row">
                             <!-- Left Side -->
                             <div class="col-11 col-md-5">
-                                <div class="card border-info mb-3">
+                                <div class="card border-dark mb-3">
                                     <div class="card-body text-info">
                                       <h4 class="card-title">Search for a City:</h4>
                                       <form class="form-inline my-2 my-lg-0">
                                         <input id="searchinfo" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="">
-                                        <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                        <button id="search" class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
                                       </form>
-                                      <p class="card-text">
-                                           </p>
+                                      <p class="card-text"></p>
                                            <div id="buttons-view">City Name</div>
                                     </div>
                                 </div>
@@ -39,20 +38,20 @@
                             <div class="col-11 col-md-7">
                                 
                                 <div class="row">
-                                    <div class="card border-warning mb-3 w-100 today-weather">
+                                    <div class="card border-dark mb-3 w-100 today-weather">
                                         <div class="card-body text-dark education today-cont">
-                                          <h5 class="card-title">Current Weather</h5>
+                                          <h5 class="card-title text-info">Current Weather</h5>
                                           <div class="card" style="width: 18rem;">
                                             <div class="card-header" id="city">
                                               City 
                                             </div>  
                                               <div id="to-Day">Tuesday</div> <div id="to-Date">00</div>
                                             
-                                            <ul class="list-group list-group-flush">
+                                            <ul class="list-group list-group-flush listy">
                                               <li class="list-group-item" id="temperature">Temperature:</li>
                                               <li class="list-group-item" id="humidity">Humidity:</li>
                                               <li class="list-group-item" id="wind">Wind Speed:</li>
-                                              <li class="list-group-item" id="uvi">UV Index:</li>
+                                              <li class="list-group-item" id="uvi">UV Index: <span id="vally"></span></li>
                                             </ul>
                                           </div>
                                         </div>
@@ -69,58 +68,58 @@
                     
                      <div class="row fix">
                       <div class="container col-sm-12">  
-                       <div class="card border-info mb-3">
+                       <div class="card border-dark mb-3">
                            <div class="card-body text-info">
-                             <h5 class="card-title">5 Day Forecast:</h5>
+                             <h5 class="card-title">4 Day Forecast:</h5>
                              <div class="row">
                                <div class="col-11 col-sm-3" id="forecast1">
-                                 <div class="card">
-                                   <div class="card-body">
+                                 <div class="card fore">
+                                   <div class="card-body text-light">
                                      <h5 class="card-title" id="foreday"></h5>
                                      <p class="card-text" id="foredate">.</p>
                                      <p id="foretemperature">03</p>
                                      <p id="forehumidity">-</p>
                                      <p id="foredesc">-</p>
-                                     <p id="foreuvi">-</p>
+                                     <!--<p id="foreuvi">-</p>-->
                                     
                                    </div>
                                  </div>
                                </div>
                                <div class="col-11 col-sm-3" id="forecast2">
-                                 <div class="card">
-                                   <div class="card-body">
+                                 <div class="card fore">
+                                   <div class="card-body text-light">
                                      <h5 class="card-title" id="foreday"></h5>
                                      <p class="card-text" id="foredate">-</p>
                                      <p id="foretemperature">03</p>
                                      <p id="forehumidity">-</p>
                                      <p id="foredesc">-</p>
-                                     <p id="foreuvi">-</p>
+                                     <!--<p id="foreuvi">-</p>-->
                                      
                                    </div>
                                  </div>
                                </div>
                                <div class="col-11 col-sm-3" id="forecast3">
-                                 <div class="card">
-                                   <div class="card-body">
+                                 <div class="card fore">
+                                   <div class="card-body text-light">
                                      <h5 class="card-title" id="foreday"></h5>
                                      <p class="card-text" id="foredate">.</p>
                                      <p id="foretemperature">03</p>
                                      <p id="forehumidity">-</p>
                                      <p id="foredesc">-</p>
-                                     <p id="foreuvi">-</p>
+                                     <!--<p id="foreuvi">-</p>-->
                                      
                                    </div>
                                  </div>
                                </div>
                                <div class="col-11 col-sm-3" id="forecast4">
-                                 <div class="card">
-                                   <div class="card-body">
+                                 <div class="card fore">
+                                   <div class="card-body text-light">
                                      <h5 class="card-title" id="foreday"></h5>
                                      <p class="card-text" id="foredate">-</p>
                                      <p id="foretemperature">03</p>
                                      <p id="forehumidity">-</p>
                                      <p id="foredesc">-</p>
-                                     <p id="foreuvi">-</p>
+                                     <!--<p id="foreuvi">-</p>-->
                                      
                                    </div>
                                  </div>

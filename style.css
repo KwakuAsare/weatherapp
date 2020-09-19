@@ -4,3 +4,17 @@
     padding-left: 20px;
 }
 
+.city-btn {
+    list-style: none;
+    margin: 5px;
+}
+.fore {
+    background: #3480eb;
+}
+.listy {
+    border: 6px;
+}
+#vally {
+    background: red;
+    border: 1px solid;
+}
