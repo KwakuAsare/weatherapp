@@ -85,6 +85,7 @@ $("#search").on("click", function(event) {
         method: "GET"
     }).then(function(response) {
         city.textcontent = response.name;
+        console.log(city.textContent);
           $("#temperature").text("Temperature: " + Math.floor((response.main.temp - 273.15) * 1.8 + 32) + "F");
           $("#humidity").text("Humidity: " + response.main.humidity + "%");
           $("#wind").text("Wind: " + Math.floor(response.wind.speed * 2.237) + "mph");
@@ -118,9 +119,10 @@ $("#search").on("click", function(event) {
 })
 // search by city ends //
 
-//previous search
+//clicking on saved searches 
 
-$(document).on("click", function(){
+$(document).on("click", ".city-btn", function(){
+    console.log("click me");
     var cityname = $(this).text();
   
     queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityname + "&appid=" + APIKey;
@@ -157,7 +159,7 @@ $(document).on("click", function(){
         });
     });
   });
-// previous ends
+//  ends
 
  
 
@@ -166,12 +168,12 @@ $(document).on("click", function(){
 
 
 
-//var cityname = [];
+//
 var citySearch = [];
 function displaySearches() {
 $("#buttons-view").empty();
 for  (var i = 0; i < citySearch.length; i++) {
-    var c = $("<li>", "<button>");
+    var c = $( "<button>");
     c.addClass("city-btn btn btn-primary btn-sm");
     c.attr("data-name", citySearch[i]);
     c.text(citySearch[i]);
