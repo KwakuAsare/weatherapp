@@ -42,7 +42,9 @@ function currentLocation() {
             url: queryUV,
             method: "GET"
           }).then(function(response){
-            $("#vally").text(response.value); 
+              var ultra = response.value;
+              console.log(response);
+            $("#vally").text(ultra); 
           });
 
         })
@@ -62,7 +64,7 @@ function currentLocation() {
         })
 
     } else {
-        city.innerHTML = "location unknown.";
+        city.textContent = "location unknown.";
     }
 }
 currentLocation();
@@ -71,6 +73,7 @@ currentLocation();
 //search by city
 citySearch = [];
 $("#search").on("click", function(event) {
+    console.log("search clicked");
     event.preventDefault();
     var cityname = $("#searchinfo").val();
     console.log(cityname);
@@ -84,7 +87,8 @@ $("#search").on("click", function(event) {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        city.textcontent = response.name;
+        console.log(response);
+        city.textContent = response.name;
         console.log(city.textContent);
           $("#temperature").text("Temperature: " + Math.floor((response.main.temp - 273.15) * 1.8 + 32) + "F");
           $("#humidity").text("Humidity: " + response.main.humidity + "%");
@@ -99,7 +103,9 @@ $("#search").on("click", function(event) {
         url: queryUV,
         method: "GET"
      }).then(function(response) {
-        $("#vally").text("UV Index: " + response.value); 
+         ultra2 = response.value;
+         $("#vally").empty();
+        $("#vally").text("UV Index: " + ultra2); 
      });
      
      $.ajax({
